@@ -56,5 +56,10 @@ public class Employee {
 		return this.name+", "+this.age+", "+this.salary+", "+this.t_rate+", "+this.t_income;
 	}
 	
+	public double cal_Income() {
+		this.t_income = this.salary - (this.salary*this.t_rate);
+		return this.t_income;
+	}
+	
 	
 }
