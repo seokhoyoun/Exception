@@ -42,7 +42,7 @@ public class Employee {
 		return t_rate;
 	}
 	public void setT_rate(double t_rate) {
-		this.t_rate = t_rate;
+		this.t_rate = Math.floor(t_rate*100)/100.0;
 	}
 	public double getT_income() {
 		return t_income;
