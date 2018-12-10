@@ -11,6 +11,14 @@ public class Employee {
 	public Employee() {
 		
 	}
+	public Employee(String name, int age, int salary, double t_rate) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.salary = salary;
+		this.t_rate = t_rate;
+		this.t_income = Math.floor(t_rate*100)/100.0;
+	}
 	public Employee(String name, int age, int salary, double t_rate, double t_income) {
 		super();
 		this.name = name;

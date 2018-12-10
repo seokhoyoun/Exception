@@ -12,6 +12,14 @@ public class TestWork3 {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		Employee emp = new Employee(); 
 		ArrayList<Employee> list = new ArrayList<Employee>();
+			list.add(new Employee("asdf",25,333333,0.14));
+			list.add(new Employee("bsdf",28,333333,0.14));
+			list.add(new Employee("csdf",22,333333,0.14));
+			list.add(new Employee("dsdf",33,333333,0.14));
+			list.add(new Employee("esdf",55,333333,0.14));
+		for(int i = 0; i < list.size(); i++) {
+			System.out.println(list.get(i));
+		}
 		try {
 			System.out.print("이름을 입력하세요 : ");
 			emp.setName(in.readLine());
