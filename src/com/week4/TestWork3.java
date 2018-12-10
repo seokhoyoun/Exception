@@ -16,7 +16,7 @@ public class TestWork3 {
 		try {
 			while(true) {
 				System.out.print("1. 새 사원 정보 생성\n"
-						+ "2. 종료\n"
+						+ "2. 종료 및 사원 정보 출력\n"
 						+ "번호 입력 : ");
 				mnum = Integer.parseInt(in.readLine());
 				if(mnum == 1) {
