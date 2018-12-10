@@ -1,6 +1,6 @@
 package dcom.week4;
 
-public class Employee {
+public class Employee implements java.lang.Comparable<Employee>{
 	// Field
 	private String name; // 사원명
 	private int age; // 나이
@@ -16,8 +16,8 @@ public class Employee {
 		this.name = name;
 		this.age = age;
 		this.salary = salary;
-		this.t_rate = t_rate;
-		this.t_income = Math.floor(t_rate*100)/100.0;
+		this.t_rate = Math.floor(t_rate*100)/100.0;
+		this.t_income = this.salary - (this.salary*this.t_rate);
 	}
 	public Employee(String name, int age, int salary, double t_rate, double t_income) {
 		super();
@@ -66,7 +66,12 @@ public class Employee {
 	
 	public double cal_Income() {
 		this.t_income = this.salary - (this.salary*this.t_rate);
-		return this.t_income;
+		return Math.floor(this.t_income*100)/100.0;
+	}
+	@Override
+	public int compareTo(Employee o) {
+		// TODO Auto-generated method stub
+		return this.name.compareTo(o.getName());
 	}
 	
 	
